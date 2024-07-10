@@ -8,7 +8,3 @@ body {
 * {
   box-sizing: border-box;
 }
-
-.input-error {
-  border-color: red !important;
-}
