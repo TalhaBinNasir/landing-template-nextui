@@ -29,10 +29,10 @@ export const Nav = () => {
          }}
       >
          <Navbar.Brand>
-            <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
+            {/* <Navbar.Toggle aria-label="toggle navigation" showIn="xs" /> */}
             <AcmeLogo />
             <Text b color="inherit" hideIn="xs">
-               ACME
+               MABPK Management
             </Text>
             <Navbar.Content
                hideIn="sm"
@@ -40,7 +40,7 @@ export const Nav = () => {
                   pl: '6rem',
                }}
             >
-               <Dropdown isBordered>
+               {/* <Dropdown isBordered>
                   <Navbar.Item>
                      <Dropdown.Button
                         auto
@@ -115,16 +115,14 @@ export const Nav = () => {
                         +Supreme Support
                      </Dropdown.Item>
                   </Dropdown.Menu>
-               </Dropdown>
-               <Navbar.Link isActive href="#">
+               </Dropdown> */}
+               {/* <Navbar.Link isActive href="#">
                   Customers
-               </Navbar.Link>
-               <Navbar.Link href="#">Pricing</Navbar.Link>
-               <Navbar.Link href="#">Company</Navbar.Link>
+               </Navbar.Link> */}
             </Navbar.Content>
          </Navbar.Brand>
 
-         <Navbar.Collapse>
+         {/* <Navbar.Collapse>
             {collapseItems.map((item, index) => (
                <Navbar.CollapseItem key={item}>
                   <Link
@@ -139,18 +137,6 @@ export const Nav = () => {
                </Navbar.CollapseItem>
             ))}
             <Navbar.CollapseItem>
-               <Link
-                  color="inherit"
-                  css={{
-                     minWidth: '100%',
-                  }}
-                  target="_blank"
-                  href="https://github.com/Siumauricio/landing-template-nextui"
-               >
-                  <GithubIcon />
-               </Link>
-            </Navbar.CollapseItem>
-            <Navbar.CollapseItem>
                <Switch
                   checked={isDark}
                   onChange={(e) =>
@@ -158,35 +144,21 @@ export const Nav = () => {
                   }
                />
             </Navbar.CollapseItem>
-         </Navbar.Collapse>
+         </Navbar.Collapse> */}
          <Navbar.Content>
             <ModalLogin />
 
-            <Navbar.Item>
+            {/* <Navbar.Item>
                <Button auto flat href="#">
                   Start free trial
                </Button>
-            </Navbar.Item>
-            <Navbar.Item hideIn={'xs'}>
-               <Link
-                  color="inherit"
-                  css={{
-                     minWidth: '100%',
-                  }}
-                  target="_blank"
-                  href="https://github.com/Siumauricio/landing-template-nextui"
-               >
-                  <GithubIcon />
-               </Link>
-            </Navbar.Item>
-            <Navbar.Item hideIn={'xs'}>
+            </Navbar.Item> */}
                <Switch
                   checked={isDark}
                   onChange={(e) =>
                      setTheme(e.target.checked ? 'dark' : 'light')
                   }
                />
-            </Navbar.Item>
          </Navbar.Content>
       </Navbar>
    );
