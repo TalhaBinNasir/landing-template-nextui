@@ -58,7 +58,7 @@ export const ModalLogin = () => {
         aria-labelledby="modal-title"
         open={visible}
         onClose={closeHandler}
-        style={{minHeight:'60vh'}}
+        style={{ minHeight: "60vh" }}
       >
         <Modal.Header>
           <div>
