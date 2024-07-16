@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Modal,
-  Input,
-  Button,
-  Text,
-  Navbar,
-  Textarea,
-} from "@nextui-org/react";
+import { Modal, Input, Button, Text, Textarea } from "@nextui-org/react";
 
 export const ModalLogin = () => {
   const [visible, setVisible] = React.useState(false);
@@ -51,7 +44,9 @@ export const ModalLogin = () => {
   };
   return (
     <div>
-      <Navbar.Link onClick={handler}>Contact Us</Navbar.Link>
+      <Button color="default" onClick={handler}>
+        Contact Us
+      </Button>
       <Modal
         closeButton
         blur

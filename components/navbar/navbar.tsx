@@ -13,6 +13,7 @@ import { AcmeLogo } from "./logo";
 import { useTheme as useNextTheme } from "next-themes";
 import { useTheme } from "@nextui-org/react";
 import { GithubIcon } from "../icons/GithubIcon";
+import Image from "next/image";
 
 export const Nav = () => {
   const { setTheme } = useNextTheme();
@@ -32,15 +33,23 @@ export const Nav = () => {
         "& .nextui-navbar-container": {
           background: "$background",
           borderBottom: "none",
+          maxWidth: "100%",
+          paddingLeft: 0,
+          minHeight: "100px",
         },
       }}
     >
       <Navbar.Brand>
         {/* <Navbar.Toggle aria-label="toggle navigation" showIn="xs" /> */}
-        <AcmeLogo />
-        <Text b color="inherit" hideIn="xs">
+        <Image
+          src="/Trucktalk (1) (1)-01.png"
+          alt="logo"
+          width={250}
+          height={150}
+        />
+        {/* <Text b color="inherit" hideIn="xs">
           Truck Talk Logistics
-        </Text>
+        </Text> */}
         <Navbar.Content
           hideIn="sm"
           css={{
@@ -160,10 +169,10 @@ export const Nav = () => {
                   Start free trial
                </Button>
             </Navbar.Item> */}
-        <Switch
+        {/* <Switch
           checked={isDark}
           onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
-        />
+        /> */}
       </Navbar.Content>
     </Navbar>
   );

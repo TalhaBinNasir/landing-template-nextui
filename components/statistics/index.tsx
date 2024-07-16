@@ -1,89 +1,136 @@
-import {Button, Divider, Text} from '@nextui-org/react';
-import React from 'react';
-import {Box} from '../styles/box';
-import {Flex} from '../styles/flex';
+import { Button, Divider, Text } from "@nextui-org/react";
+import React from "react";
+import { Box } from "../styles/box";
+import { Flex } from "../styles/flex";
+import { GlobeIcon } from "./globeicon";
+import { ResponseIcon } from "./response";
+import { TrustIcon } from "./trusticon";
+import { SolutionIcon } from "./solutions";
+import { PeaceIcon } from "./peace";
+import { CostIcon } from "./costicon";
 
 export const Statistics = () => {
-   return (
-      <>
-         <Box
+  return (
+    <>
+      <Box
+        css={{
+          pt: "$20",
+          pb: "$16",
+          px: "$6",
+        }}
+      >
+        <Flex direction={"column"} align={"center"}>
+          <Text
+            h3
             css={{
-               pt: '$20',
-               pb: '$16',
-               px: '$6',
+              textAlign: "center",
             }}
-         >
-            <Flex direction={'column'} align={'center'}>
-               <Text
-                  h3
-                  css={{
-                     textAlign: 'center',
-                  }}
-               >
-                  Over 8000+ projects completed
-               </Text>
-               <Text
-                  span
-                  css={{
-                     maxWidth: '800px',
-                     textAlign: 'center',
-                  }}
-               >
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Iusto provident omnis deleniti temporibus pariatur corporis
-                  aperiam
-               </Text>
-            </Flex>
-            <Flex
-               direction={'row'}
-               wrap={'wrap'}
-               justify={'center'}
-               css={{
-                  'gap': '4rem',
-                  'pt': '$16',
-                  '@sm': {
-                     gap: '10rem',
-                  },
-               }}
+          >
+            Why Choose Us?
+          </Text>
+        </Flex>
+        <Flex
+          direction={"row"}
+          wrap={"wrap"}
+          justify={"center"}
+          css={{
+            gap: "4rem",
+            pt: "$16",
+            "@sm": {
+              gap: "10rem",
+            },
+          }}
+        >
+          <Flex direction={"column"}>
+            <Box
+              css={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-               <Flex direction={'column'}>
-                  <Text h2 css={{color: '$blue600'}}>
-                     $500K+
-                  </Text>
-                  <Text span css={{textAlign: 'center'}} weight={'medium'}>
-                     Revenue
-                  </Text>
-               </Flex>
-               <Flex direction={'column'}>
-                  <Text h2 css={{color: '$blue600'}}>
-                     10+
-                  </Text>
-                  <Text span css={{textAlign: 'center'}} weight={'medium'}>
-                     Products
-                  </Text>
-               </Flex>
-               <Flex direction={'column'}>
-                  <Text h2 css={{color: '$blue600'}}>
-                     $150+
-                  </Text>
-                  <Text span css={{textAlign: 'center'}} weight={'medium'}>
-                     Components
-                  </Text>
-               </Flex>
-               <Flex direction={'column'}>
-                  <Text h2 css={{color: '$blue600'}}>
-                     10+
-                  </Text>
-                  <Text span css={{textAlign: 'center'}} weight={'medium'}>
-                     Employees
-                  </Text>
-               </Flex>
-            </Flex>
-         </Box>
+              <GlobeIcon />
+              <Text h3 css={{ color: "$blue600", pl: "6px" }}>
+                Expertise
+              </Text>
+            </Box>
+          </Flex>
+          <Flex direction={"column"}>
+            <Box
+              css={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <CostIcon />
+              <Text h3 css={{ color: "$blue600", pl: "6px" }}>
+                Cost Savings
+              </Text>
+            </Box>
+          </Flex>
+          <Flex direction={"column"}>
+            <Box
+              css={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <ResponseIcon />
+              <Text h3 css={{ color: "$blue600", pl: "6px" }}>
+                Fast Response
+              </Text>
+            </Box>
+          </Flex>
+          <Flex direction={"column"}>
+            <Box
+              css={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <PeaceIcon />
+              <Text h3 css={{ color: "$blue600", pl: "6px" }}>
+                Peace of Mind
+              </Text>
+            </Box>
+          </Flex>
+          <Flex direction={"column"}>
+            <Box
+              css={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <SolutionIcon />
+              <Text h3 css={{ color: "$blue600", pl: "6px" }}>
+                Customized Solutions
+              </Text>
+            </Box>
+          </Flex>
+          <Flex direction={"column"}>
+            <Box
+              css={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <TrustIcon />
+              <Text h3 css={{ color: "$blue600", pl: "6px" }}>
+                Reliability
+              </Text>
+            </Box>
+          </Flex>
+        </Flex>
+      </Box>
 
-         <Divider
-            css={{position: 'absolute', inset: '0p', left: '0', mt: '$5'}}
-         />
-      </>
-   );
+      <Divider
+        css={{ position: "absolute", inset: "0p", left: "0", mt: "$5" }}
+      />
+    </>
+  );
 };

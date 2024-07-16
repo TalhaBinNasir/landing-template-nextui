@@ -3,6 +3,7 @@ import React from "react";
 import { CheckIcon } from "../icons/CheckIcon";
 import { Box } from "../styles/box";
 import { Flex } from "../styles/flex";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -15,7 +16,6 @@ export const Hero = () => {
           flexDirection: "column",
           width: "100%",
           minHeight: "500px",
-          border: "1px solid",
           "@sm": {
             flexDirection: "column",
           },
@@ -33,17 +33,17 @@ export const Hero = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            filter: "blur(4px)",
+            filter: "blur(6px)",
           }}
         />
         <Box
           css={{
-            pt: "$13",
             display: "flex",
             flexDirection: "column",
-            gap: "$5",
             position: "relative",
             zIndex: 1,
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <Box
@@ -51,18 +51,25 @@ export const Hero = () => {
               maxWidth: "600px",
             }}
           >
-            <Text
+            {/* <Text
               h1
               css={{
                 display: "inline",
               }}
             >
               Truck Talk Logistics
-            </Text>
+            </Text> */}
+            <Image
+              src={"/Trucktalk (1) (1)-01.png"}
+              alt="logo"
+              width={800}
+              height={400}
+              layout="responsive"
+            />
           </Box>
           <Text
             css={{
-              color: "$accents3",
+              color: "$accents5",
               maxWidth: "400px",
             }}
             size={"$lg"}
