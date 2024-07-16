@@ -15,7 +15,11 @@ import { useTheme } from "@nextui-org/react";
 import { GithubIcon } from "../icons/GithubIcon";
 import Image from "next/image";
 
-export const Nav = () => {
+interface props {
+  ref: any;
+}
+
+export const Nav = ({ ref }: props) => {
   const { setTheme } = useNextTheme();
   const { isDark, type } = useTheme();
   const collapseItems = [
@@ -25,6 +29,9 @@ export const Nav = () => {
     "Company",
     "Legal",
   ];
+  const handleScrollToFooter = () => {
+    ref?.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <Navbar
       isBordered
@@ -162,8 +169,8 @@ export const Nav = () => {
             </Navbar.CollapseItem>
          </Navbar.Collapse> */}
       <Navbar.Content>
-        <ModalLogin />
-
+        {/* <ModalLogin /> */}
+        {/* <Button onClick={handleScrollToFooter}></Button> */}
         {/* <Navbar.Item>
                <Button auto flat href="#">
                   Start free trial

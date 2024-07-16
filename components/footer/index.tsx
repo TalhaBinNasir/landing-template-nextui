@@ -29,7 +29,7 @@ export const Footer = () => {
           width={400}
           height={250}
         />
-        <ModalLogin />
+        {/* <ModalLogin /> */}
       </Box>
     </Flex>
   );

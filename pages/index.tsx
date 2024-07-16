@@ -11,24 +11,20 @@ import { Testimonials } from "../components/tesminonials";
 import { Statistics } from "../components/statistics";
 import { Plans } from "../components/plans";
 import { Faq } from "../components/faq";
-import { Trial } from "../components/trial";
+import { AboutUs } from "../components/trial";
 import { Footer } from "../components/footer";
+import { useRef } from "react";
 
 const Home: NextPage = () => {
+  const aboutUsRef = useRef<HTMLDivElement>(null);
   return (
     <Layout>
-      <Nav />
+      <Nav ref={aboutUsRef} />
       <Box as="main">
         <Hero />
-        {/* <Trusted /> */}
-        {/* <Features1 /> */}
-        {/* <Features2 /> */}
         <Features3 />
-        {/* <Testimonials /> */}
         <Statistics />
-        {/* <Plans /> */}
-        {/* <Faq /> */}
-        {/* <Trial /> */}
+        <AboutUs ref={aboutUsRef} />
         <Footer />
       </Box>
     </Layout>
