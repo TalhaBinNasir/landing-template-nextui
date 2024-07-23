@@ -1,6 +1,6 @@
 import { Button, Divider, Input, Text, Textarea } from "@nextui-org/react";
 import React, { useRef, useState } from "react";
-import { Flex } from "../styles/flex";
+import emailjs from '@emailjs/browser';
 
 interface props {
   ref: any;
@@ -36,8 +36,16 @@ export const AboutUs = ({ ref }: props) => {
 
   const handleSubmit = () => {
     if (validate()) {
-      console.log("Form submitted:", form);
-      closeHandler();
+      emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID as string, process.env.NEXT_PUBLIC_TEMPLATE_ID as string, form, process.env.NEXT_PUBLIC_USER_ID as string)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Email sent successfully!');
+        closeHandler();
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        alert('Failed to send email.');
+      });
     }
   };
 
@@ -144,7 +152,7 @@ export const AboutUs = ({ ref }: props) => {
             onClick={closeHandler}
             style={{ marginRight: 10 }}
           >
-            Close
+            Clear
           </Button>
           <Button auto onClick={handleSubmit}>
             Send Message
