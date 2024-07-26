@@ -14,12 +14,14 @@ import { useTheme as useNextTheme } from "next-themes";
 import { useTheme } from "@nextui-org/react";
 import { GithubIcon } from "../icons/GithubIcon";
 import Image from "next/image";
+import { useRouter } from 'next/router'
 
 interface props {
-  ref: any;
+  ref?: any;
 }
 
 export const Nav = ({ ref }: props) => {
+   const router = useRouter()
   const { setTheme } = useNextTheme();
   const { isDark, type } = useTheme();
   const collapseItems = [
@@ -170,7 +172,7 @@ export const Nav = ({ ref }: props) => {
          </Navbar.Collapse> */}
       <Navbar.Content>
         {/* <ModalLogin /> */}
-        {/* <Button onClick={handleScrollToFooter}></Button> */}
+        <Button onClick={()=>{router.push('/carrier-portal')}}>Carrier Portal</Button>
         {/* <Navbar.Item>
                <Button auto flat href="#">
                   Start free trial

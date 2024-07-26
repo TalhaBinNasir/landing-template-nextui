@@ -5,7 +5,11 @@ import { Box } from "../styles/box";
 import { Flex } from "../styles/flex";
 import Image from "next/image";
 
-export const Hero = () => {
+interface props {
+  title?:string
+}
+
+export const Hero = ({title = 'Your Freight, Our Priority.'}:props) => {
   return (
     <>
       <Flex
@@ -72,10 +76,10 @@ export const Hero = () => {
               color: "$accents5",
               maxWidth: "400px",
             }}
-            size={"$lg"}
+            size={"$2xl"}
             span
           >
-            Your Freight, Our Priority.
+            {title}
           </Text>
         </Box>
       </Flex>
