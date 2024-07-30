@@ -12,10 +12,10 @@ interface CustomInputProps {
   
   const CustomInput = ({ name, label, type, touched, error, onChange }:CustomInputProps) => {
     return (
-      <div>
+      <div style={{paddingRight:'25px'}}>
         <Input
           clearable
-          bordered
+          bordered={type !== 'file'}
           fullWidth
           color="primary"
           size="lg"

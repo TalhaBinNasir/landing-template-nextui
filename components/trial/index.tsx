@@ -87,7 +87,7 @@ export const AboutUs = ({ ref }: props) => {
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "33px",
+            gap: "50px",
             paddingTop: "20px",
             width: "50%",
           }}
@@ -140,7 +140,7 @@ export const AboutUs = ({ ref }: props) => {
           style={{
             display: "flex",
             flexDirection: "row",
-            paddingTop: 20,
+            paddingTop: 30,
             justifyContent: "flex-end",
             width: "50%",
           }}
