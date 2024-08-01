@@ -85,6 +85,10 @@ const CarrierForm = () => {
     file3: null,
   });
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, name:string) =>{
+    console.log('uploaded file', e.target.files);
+  }
+
   const handleSubmit = (values: any) => {
     console.log(values);
     // Handle form submission
